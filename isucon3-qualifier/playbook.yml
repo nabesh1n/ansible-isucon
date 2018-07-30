@@ -74,7 +74,7 @@
       shell: |
         set -e
         source /home/isucon/env.sh
-        cd webapp/go/
+        cd /home/isucon/webapp/go/
         go get github.com/go-sql-driver/mysql
         go get github.com/gorilla/mux
         go get github.com/gorilla/sessions
@@ -92,7 +92,7 @@
       shell: |
         set -e
         source /home/isucon/env.sh
-        cd webapp/nodejs/
+        cd /home/isucon/webapp/nodejs/
         npm install
       args:
         creates: /home/isucon/webapp/nodejs/node_modules
@@ -106,7 +106,7 @@
       shell: |
         set -e
         source /home/isucon/env.sh
-        cd webapp/perl/
+        cd /home/isucon/webapp/perl/
         curl -L https://cpanmin.us | perl - Carton
         carton install
 
@@ -123,7 +123,7 @@
       shell: |
         set -e
         source /home/isucon/env.sh
-        cd webapp/ruby/
+        cd /home/isucon/webapp/ruby/
         gem install bundler foreman
         bundle install --deployment --without development
 
@@ -137,7 +137,7 @@
       shell: |
         set -e
         source /home/isucon/env.sh
-        cd webapp/python/
+        cd /home/isucon/webapp/python/
         easy_install flask gunicorn python3-memcached PyMySQL3
 
     # bench
